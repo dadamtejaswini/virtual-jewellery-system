@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 300" width="160" height="300">
+  <defs>
+    <linearGradient id="goldTikka" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a3"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="80%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <radialGradient id="rubyTikka" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="60%" stop-color="#d63031"/>
+      <stop offset="100%" stop-color="#800020"/>
+    </radialGradient>
+    <radialGradient id="pearlTikka" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f5e6d3"/>
+      <stop offset="100%" stop-color="#dcdde1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Hair Line Hook Pin -->
+  <circle cx="80" cy="15" r="5" fill="none" stroke="url(#goldTikka)" stroke-width="2.5"/>
+
+  <!-- Vertical Hair Chain Strand -->
+  <line x1="80" y1="20" x2="80" y2="140" stroke="url(#goldTikka)" stroke-width="3" stroke-dasharray="8,4"/>
+  <!-- Pearl beads along strand -->
+  <circle cx="80" cy="45" r="4" fill="url(#pearlTikka)"/>
+  <circle cx="80" cy="75" r="4" fill="url(#pearlTikka)"/>
+  <circle cx="80" cy="105" r="4" fill="url(#pearlTikka)"/>
+
+  <!-- Forehead Main Tikka Pendant -->
+  <g transform="translate(80, 200)">
+    <!-- Outer Kundan Medallion -->
+    <path d="M 0,-50 L 35,-20 L 45,20 L 0,55 L -45,20 L -35,-20 Z" fill="url(#goldTikka)" stroke="#805b00" stroke-width="2"/>
+    <!-- Center Ruby Gem -->
+    <circle cx="0" cy="0" r="18" fill="url(#rubyTikka)" stroke="url(#goldTikka)" stroke-width="2"/>
+    
+    <!-- Pearl Halo around Pendant -->
+    <circle cx="0" cy="-32" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="22" cy="-22" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="32" cy="0" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="22" cy="22" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="-22" cy="22" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="-32" cy="0" r="4" fill="url(#pearlTikka)"/>
+    <circle cx="-22" cy="-22" r="4" fill="url(#pearlTikka)"/>
+
+    <!-- Hanging Bottom Teardrop -->
+    <g transform="translate(0, 55)">
+      <line x1="0" y1="0" x2="0" y2="15" stroke="url(#goldTikka)" stroke-width="2"/>
+      <path d="M 0,15 Q 10,35 0,45 Q -10,35 0,15 Z" fill="url(#rubyTikka)" stroke="url(#goldTikka)" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" width="160" height="260">
+  <defs>
+    <linearGradient id="gold3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a3"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#aa841e"/>
+    </linearGradient>
+    <radialGradient id="ruby3" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff6b81"/>
+      <stop offset="50%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Flower Top Stud -->
+  <g transform="translate(80, 45)">
+    <circle cx="0" cy="0" r="10" fill="url(#gold3)"/>
+    <circle cx="0" cy="-16" r="8" fill="url(#ruby3)"/>
+    <circle cx="15" cy="-6" r="8" fill="url(#ruby3)"/>
+    <circle cx="15" cy="11" r="8" fill="url(#ruby3)"/>
+    <circle cx="0" cy="18" r="8" fill="url(#ruby3)"/>
+    <circle cx="-15" cy="11" r="8" fill="url(#ruby3)"/>
+    <circle cx="-15" cy="-6" r="8" fill="url(#ruby3)"/>
+  </g>
+
+  <!-- Chandelier Drop -->
+  <g transform="translate(80, 160)">
+    <path d="M 0,-70 L 45,-10 Q 0,40 -45,-10 Z" fill="url(#gold3)" stroke="#805b00" stroke-width="2"/>
+    <circle cx="0" cy="-20" r="14" fill="url(#ruby3)"/>
+    <!-- 3 Hanging Ruby Drops -->
+    <path d="M -30,0 Q -30,35 -30,45 Q -38,35 -30,0 Z" fill="url(#ruby3)"/>
+    <path d="M 0,15 Q 0,55 0,68 Q -10,55 0,15 Z" fill="url(#ruby3)"/>
+    <path d="M 30,0 Q 30,35 30,45 Q 22,35 30,0 Z" fill="url(#ruby3)"/>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" width="160" height="260">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a3"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="80%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <radialGradient id="ruby" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="60%" stop-color="#d63031"/>
+      <stop offset="100%" stop-color="#800020"/>
+    </radialGradient>
+    <radialGradient id="pearl" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f5e6d3"/>
+      <stop offset="100%" stop-color="#dcdde1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Top Ear Stud Stud Attachment -->
+  <g transform="translate(80, 40)">
+    <circle cx="0" cy="0" r="22" fill="url(#gold)" stroke="#805b00" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="12" fill="url(#ruby)" stroke="url(#gold)" stroke-width="1.5"/>
+    <!-- Small pearl border -->
+    <circle cx="0" cy="-22" r="3.5" fill="url(#pearl)"/>
+    <circle cx="16" cy="-15" r="3.5" fill="url(#pearl)"/>
+    <circle cx="22" cy="0" r="3.5" fill="url(#pearl)"/>
+    <circle cx="16" cy="15" r="3.5" fill="url(#pearl)"/>
+    <circle cx="0" cy="22" r="3.5" fill="url(#pearl)"/>
+    <circle cx="-16" cy="15" r="3.5" fill="url(#pearl)"/>
+    <circle cx="-22" cy="0" r="3.5" fill="url(#pearl)"/>
+    <circle cx="-16" cy="-15" r="3.5" fill="url(#pearl)"/>
+  </g>
+
+  <!-- Connecting Chain Ring -->
+  <path d="M 80,62 L 80,85" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="80" cy="74" r="5" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+  <!-- Jhumka Dome (Bell) -->
+  <g transform="translate(80, 135)">
+    <!-- Bell Canopy -->
+    <path d="M -45,10 C -45,-40 45,-40 45,10 Z" fill="url(#gold)" stroke="#664200" stroke-width="2"/>
+    <!-- Dome Base Rim -->
+    <ellipse cx="0" cy="10" rx="45" ry="12" fill="url(#gold)" stroke="#664200" stroke-width="2"/>
+    <ellipse cx="0" cy="10" rx="36" ry="8" fill="url(#ruby)"/>
+
+    <!-- Inset Ruby Rows on Dome -->
+    <circle cx="-25" cy="-15" r="4" fill="url(#ruby)"/>
+    <circle cx="-10" cy="-22" r="4.5" fill="url(#ruby)"/>
+    <circle cx="0" cy="-25" r="5" fill="url(#ruby)"/>
+    <circle cx="10" cy="-22" r="4.5" fill="url(#ruby)"/>
+    <circle cx="25" cy="-15" r="4" fill="url(#ruby)"/>
+
+    <!-- Pearl Droplets along Bottom Rim -->
+    <g transform="translate(-40, 22)"><line x1="0" y1="0" x2="0" y2="12" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="16" r="4.5" fill="url(#pearl)"/></g>
+    <g transform="translate(-25, 25)"><line x1="0" y1="0" x2="0" y2="14" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="18" r="4.5" fill="url(#pearl)"/></g>
+    <g transform="translate(-10, 27)"><line x1="0" y1="0" x2="0" y2="15" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="19" r="4.5" fill="url(#pearl)"/></g>
+    <g transform="translate(0, 28)"><line x1="0" y1="0" x2="0" y2="18" stroke="url(#gold)" stroke-width="2"/><circle cx="0" cy="22" r="5.5" fill="url(#ruby)" stroke="url(#gold)" stroke-width="1"/></g>
+    <g transform="translate(10, 27)"><line x1="0" y1="0" x2="0" y2="15" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="19" r="4.5" fill="url(#pearl)"/></g>
+    <g transform="translate(25, 25)"><line x1="0" y1="0" x2="0" y2="14" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="18" r="4.5" fill="url(#pearl)"/></g>
+    <g transform="translate(40, 22)"><line x1="0" y1="0" x2="0" y2="12" stroke="url(#gold)" stroke-width="1.5"/><circle cx="0" cy="16" r="4.5" fill="url(#pearl)"/></g>
+  </g>
+</svg>

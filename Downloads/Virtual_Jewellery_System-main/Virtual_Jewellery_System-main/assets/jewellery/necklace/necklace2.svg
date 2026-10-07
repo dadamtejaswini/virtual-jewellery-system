@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" width="500" height="280">
+  <defs>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <radialGradient id="diamondGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e0f2fe"/>
+      <stop offset="80%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </radialGradient>
+    <radialGradient id="emGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="30%" stop-color="#10b981"/>
+      <stop offset="80%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Platinum Arc -->
+  <path d="M 60,50 Q 250,160 440,50 Q 250,185 60,50 Z" fill="url(#silverGrad)" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- Emerald Cut Insets -->
+  <g transform="translate(250, 135)">
+    <rect x="-22" y="-18" width="44" height="36" rx="6" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="2"/>
+    <!-- Diamond halo -->
+    <circle cx="-28" cy="0" r="4" fill="url(#diamondGrad)"/>
+    <circle cx="28" cy="0" r="4" fill="url(#diamondGrad)"/>
+    <circle cx="0" cy="-24" r="4" fill="url(#diamondGrad)"/>
+    <circle cx="0" cy="24" r="4" fill="url(#diamondGrad)"/>
+  </g>
+
+  <!-- Left Emeralds & Diamonds -->
+  <rect x="180" y="105" width="28" height="22" rx="4" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(-15, 194, 116)"/>
+  <rect x="120" y="80" width="24" height="18" rx="4" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(-28, 132, 89)"/>
+  <rect x="70" y="52" width="20" height="15" rx="3" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(-40, 80, 59)"/>
+
+  <!-- Right Emeralds & Diamonds -->
+  <rect x="292" y="105" width="28" height="22" rx="4" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(15, 306, 116)"/>
+  <rect x="356" y="80" width="24" height="18" rx="4" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(28, 368, 89)"/>
+  <rect x="410" y="52" width="20" height="15" rx="3" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1.5" transform="rotate(40, 420, 59)"/>
+
+  <!-- Sparkling Diamond Drops -->
+  <g transform="translate(250, 180)">
+    <polygon points="0,0 12,20 0,40 -12,20" fill="url(#diamondGrad)" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="0,40 8,55 0,70 -8,55" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1"/>
+  </g>
+  <g transform="translate(190, 160)">
+    <polygon points="0,0 9,15 0,30 -9,15" fill="url(#diamondGrad)" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="0,30 6,42 0,54 -6,42" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1"/>
+  </g>
+  <g transform="translate(310, 160)">
+    <polygon points="0,0 9,15 0,30 -9,15" fill="url(#diamondGrad)" stroke="#ffffff" stroke-width="1"/>
+    <polygon points="0,30 6,42 0,54 -6,42" fill="url(#emGrad)" stroke="url(#silverGrad)" stroke-width="1"/>
+  </g>
+</svg>

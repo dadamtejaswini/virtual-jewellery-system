@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 300" width="160" height="300">
+  <defs>
+    <linearGradient id="goldT2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#aa841e"/>
+    </linearGradient>
+    <radialGradient id="emT2" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="60%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+    <radialGradient id="pearlT2" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </radialGradient>
+  </defs>
+
+  <line x1="80" y1="20" x2="80" y2="150" stroke="url(#goldT2)" stroke-width="2.5"/>
+  <circle cx="80" cy="50" r="4.5" fill="url(#pearlT2)"/>
+  <circle cx="80" cy="90" r="4.5" fill="url(#pearlT2)"/>
+  <circle cx="80" cy="130" r="4.5" fill="url(#pearlT2)"/>
+
+  <g transform="translate(80, 205)">
+    <circle cx="0" cy="0" r="40" fill="url(#goldT2)" stroke="#064e3b" stroke-width="2"/>
+    <rect x="-18" y="-18" width="36" height="36" rx="6" fill="url(#emT2)" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <path d="M 0,40 Q 12,65 0,78 Q -12,65 0,40 Z" fill="url(#emT2)" stroke="url(#goldT2)" stroke-width="1"/>
+  </g>
+</svg>

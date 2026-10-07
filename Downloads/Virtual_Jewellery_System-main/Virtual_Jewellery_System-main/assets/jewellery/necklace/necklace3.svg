@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <defs>
+    <linearGradient id="templeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe600"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <radialGradient id="rubyCenter" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="100%" stop-color="#800020"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Heavy Gold Temple Chain -->
+  <path d="M 40,30 Q 250,180 460,30" fill="none" stroke="url(#templeGold)" stroke-width="12" stroke-dasharray="14,4"/>
+  <path d="M 50,45 Q 250,195 450,45" fill="none" stroke="url(#templeGold)" stroke-width="8" stroke-dasharray="10,3"/>
+
+  <!-- Temple Coin Medallions Along Chain -->
+  <g transform="translate(110, 95)"><circle cx="0" cy="0" r="14" fill="url(#templeGold)" stroke="#664200" stroke-width="1.5"/><circle cx="0" cy="0" r="5" fill="url(#rubyCenter)"/></g>
+  <g transform="translate(170, 135)"><circle cx="0" cy="0" r="16" fill="url(#templeGold)" stroke="#664200" stroke-width="1.5"/><circle cx="0" cy="0" r="6" fill="url(#rubyCenter)"/></g>
+  <g transform="translate(330, 135)"><circle cx="0" cy="0" r="16" fill="url(#templeGold)" stroke="#664200" stroke-width="1.5"/><circle cx="0" cy="0" r="6" fill="url(#rubyCenter)"/></g>
+  <g transform="translate(390, 95)"><circle cx="0" cy="0" r="14" fill="url(#templeGold)" stroke="#664200" stroke-width="1.5"/><circle cx="0" cy="0" r="5" fill="url(#rubyCenter)"/></g>
+
+  <!-- Grand Central Temple Pendant -->
+  <g transform="translate(250, 185)">
+    <!-- Temple Shrine Arch -->
+    <path d="M -35,20 L -35,-20 Q 0,-45 35,-20 L 35,20 Q 0,40 -35,20 Z" fill="url(#templeGold)" stroke="#553500" stroke-width="2"/>
+    <circle cx="0" cy="-5" r="15" fill="url(#rubyCenter)" stroke="url(#templeGold)" stroke-width="2"/>
+    <!-- Gold Bells along bottom -->
+    <path d="M -30,25 Q -25,45 -20,25" stroke="url(#templeGold)" stroke-width="3" fill="none"/>
+    <path d="M -10,32 Q -5,52 0,32" stroke="url(#templeGold)" stroke-width="3" fill="none"/>
+    <path d="M 10,32 Q 15,52 20,32" stroke="url(#templeGold)" stroke-width="3" fill="none"/>
+    <path d="M 30,25 Q 35,45 40,25" stroke="url(#templeGold)" stroke-width="3" fill="none"/>
+  </g>
+</svg>

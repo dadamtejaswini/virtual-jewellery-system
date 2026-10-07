@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bindiRed" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="60%" stop-color="#d50000"/>
+      <stop offset="100%" stop-color="#790000"/>
+    </radialGradient>
+    <linearGradient id="bindiGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a3"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Gold Ring -->
+  <circle cx="50" cy="50" r="28" fill="url(#bindiGold)"/>
+  <!-- Inner Velvet Crimson Circle -->
+  <circle cx="50" cy="50" r="24" fill="url(#bindiRed)"/>
+  <!-- Center Gold Spark Dot -->
+  <circle cx="50" cy="50" r="6" fill="url(#bindiGold)"/>
+  <circle cx="50" cy="50" r="2.5" fill="#ffffff"/>
+  <!-- Teardrop Extension below -->
+  <path d="M 50,74 Q 56,86 50,96 Q 44,86 50,74 Z" fill="url(#bindiRed)" stroke="url(#bindiGold)" stroke-width="1"/>
+</svg>
