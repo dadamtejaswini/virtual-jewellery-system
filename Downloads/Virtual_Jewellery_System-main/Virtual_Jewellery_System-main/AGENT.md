@@ -526,7 +526,7 @@ Example architecture:
 
 ```cpp
 void setup() {
-    Serial.begin(9600);
+    gin(9600);
 
     initializeDisplay();
 

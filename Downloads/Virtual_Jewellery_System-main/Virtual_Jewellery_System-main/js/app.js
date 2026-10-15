@@ -95,19 +95,63 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Hardware Button Command Handler (Previous / Next / Save) ---
   // This is the piece that was missing: serial.js now actually listens to
   // the Arduino, and this callback decides what PREV / NEXT / SAVE do.
-  serialController.onDataReceivedCallback = (line) => {
-    const cmd = line.trim().toUpperCase();
 
-    if (cmd === "PREV") {
-      browseCatalog(-1);
-    } else if (cmd === "NEXT") {
-      browseCatalog(1);
-    } else if (cmd === "SAVE") {
-      saveCurrentDesignFromHardware();
+serialController.onDataReceivedCallback = (line) => {
+  const cmd = line.trim().toUpperCase();
+
+  console.log("Arduino message received:", cmd);
+
+  // Support the existing PREV/NEXT/SAVE commands
+  if (cmd === "PREV") {
+    browseCatalog(-1);
+    return;
+  }
+
+  if (cmd === "NEXT") {
+    browseCatalog(1);
+    return;
+  }
+
+  if (cmd === "SAVE") {
+    saveCurrentDesignFromHardware();
+    return;
+  }
+
+  // Handle category messages sent by the Arduino
+  if (cmd.startsWith("ITEM:")) {
+    const category = cmd.substring(5).trim().toLowerCase();
+
+    const categoryMap = {
+      "necklace": "necklace",
+      "earrings": "earrings",
+      "nose-ring": "noseRing",
+      "bindi": "bindi",
+      "tikka": "tikka"
+    };
+
+    const jewelleryType = categoryMap[category];
+
+    if (!jewelleryType) {
+      console.warn("Unknown Arduino category:", category);
+      return;
     }
-    // Anything else (status echoes, ACKs) is just shown in the hardware
-    // console by serialController's own logger — nothing to do here.
-  };
+
+    const item = jewelleryCatalog.find(
+      jewellery => jewellery.type === jewelleryType
+    );
+
+    if (!item) {
+      console.warn("No catalogue item found for:", jewelleryType);
+      return;
+    }
+
+    // Select the matching item through your existing UI function
+    applyItemSelection(item.id);
+
+    console.log("Arduino selected:", item.name);
+  }
+};
+
 
   // --- Face Detection Status Change Handler ---
   faceTracker.onStatusChangeCallback = (faceDetected) => {
@@ -155,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderActiveItemsPills();
 
     if (result && result.action === "selected") {
+     
       showToast(`Selected ${result.item.name}`, "success");
       if (appState.arduinoConnected) {
         const cmd = `${result.item.type.toUpperCase()}_SELECTED`;
@@ -166,6 +211,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return result;
   }
+
+  
+function handleArduinoData(line) {
+  console.log("Message received from Arduino:", line);
+
+  // Expected Arduino message: ITEM:necklace
+  if (!line.startsWith("ITEM:")) {
+    console.log("Ignoring non-selection message:", line);
+    return;
+  }
+
+  const rawCategory = line.substring(5).trim().toLowerCase();
+
+  // Match Arduino category names to your website's category names.
+  const categoryAliases = {
+    "necklace": "necklace",
+    "earrings": "earrings",
+    "nose-ring": "nose-ring",
+    "nose ring": "nose-ring",
+    "bindi": "bindi",
+    "tikka": "tikka"
+  };
+
+  const category = categoryAliases[rawCategory] || rawCategory;
+
+  // Find a jewellery item belonging to the requested category.
+  const item = jewelleryCatalog.find(j =>
+    String(j.type).trim().toLowerCase() === category
+  );
+
+  if (!item) {
+    console.warn(
+      "No catalogue item found for category:",
+      category,
+      "Available categories:",
+      [...new Set(jewelleryCatalog.map(j => j.type))]
+    );
+    return;
+  }
+
+  // Avoid toggling the item off if Arduino sends the same selection again.
+  if (selectedJewelleryState[item.type]?.id === item.id) {
+    console.log("This jewellery is already selected:", item.name);
+    return;
+  }
+
+  // Reuse your existing selection and UI-refresh function.
+  const result = applyItemSelection(item.id);
+
+  if (result) {
+    console.log("Arduino selected jewellery:", item.name);
+  }
+}
+
 
   /**
    * Move to the previous/next item in the current category and try it on,
